@@ -15,7 +15,6 @@ import {
   MapPin,
   Coffee
 } from "lucide-react";
-import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   const fadeInUp = {
@@ -302,27 +301,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-5xl font-bold mb-4 text-gray-900">Свяжитесь с нами</h2>
-            <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Оставьте заявку, и мы свяжемся с вами в течение 24 часов
-            </p>
-          </motion.div>
-
-          <ContactForm />
         </div>
       </section>
 
