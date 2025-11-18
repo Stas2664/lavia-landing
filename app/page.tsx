@@ -11,7 +11,7 @@ import {
   Megaphone,
   Newspaper,
   Film,
-  Billboard,
+  Monitor,
   Palette,
   Camera,
   UserCircle
@@ -254,7 +254,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Billboard className="w-10 h-10" />,
+                icon: <Monitor className="w-10 h-10" />,
                 title: "Наружная реклама",
                 description: "Билборды, баннеры, вывески, штендеры. Размещение на самых проходимых местах города"
               },
