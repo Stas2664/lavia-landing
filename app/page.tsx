@@ -7,13 +7,14 @@ import {
   Lightbulb, 
   Users, 
   Award, 
-  Zap, 
-  Heart, 
-  Briefcase,
-  GraduationCap,
-  DollarSign,
-  MapPin,
-  Coffee
+  Zap,
+  Megaphone,
+  Newspaper,
+  Film,
+  Billboard,
+  Palette,
+  Camera,
+  UserCircle
 } from "lucide-react";
 
 export default function Home() {
@@ -233,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Join Section */}
+      {/* Additional Services Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -243,47 +244,46 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl font-bold mb-4 text-gray-900">Почему стоит присоединиться?</h2>
+            <h2 className="text-5xl font-bold mb-4 text-gray-900">Дополнительные услуги</h2>
             <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Мы находимся в постоянном поиске талантливых и амбициозных людей, 
-              готовых развиваться вместе с нами
+              Полный спектр рекламных решений для вашего бизнеса
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Briefcase className="w-10 h-10" />,
-                title: "Интересные проекты",
-                description: "Вы будете работать с клиентами из разных сфер — от локального бизнеса до федеральных брендов"
+                icon: <Billboard className="w-10 h-10" />,
+                title: "Наружная реклама",
+                description: "Билборды, баннеры, вывески, штендеры. Размещение на самых проходимых местах города"
               },
               {
-                icon: <GraduationCap className="w-10 h-10" />,
-                title: "Профессиональный рост",
-                description: "Мы создаем условия для развития: оплачиваемые курсы и вебинары, внутренние воркшопы и библиотека профессиональной литературы"
+                icon: <Newspaper className="w-10 h-10" />,
+                title: "Создание журналов",
+                description: "Разработка корпоративных журналов, каталогов продукции и рекламных буклетов"
               },
               {
-                icon: <DollarSign className="w-10 h-10" />,
-                title: "Стабильность и прозрачность",
-                description: "Официальное трудоустройство по ТК РФ, конкурентная «белая» заработная плата и четко поставленные задачи"
+                icon: <Film className="w-10 h-10" />,
+                title: "Видеопродакшн",
+                description: "Съемка рекламных роликов, корпоративных видео и презентационных материалов"
               },
               {
-                icon: <MapPin className="w-10 h-10" />,
-                title: "Современный офис",
-                description: "Удобное расположение в бизнес-центре, комфортные рабочие места и зоны для отдыха"
+                icon: <Megaphone className="w-10 h-10" />,
+                title: "Радиореклама",
+                description: "Создание аудиороликов и размещение на ведущих радиостанциях региона"
               },
               {
-                icon: <Heart className="w-10 h-10" />,
-                title: "Дружная команда",
-                description: "Атмосфера взаимопомощи, регулярные корпоративные и тимбилдинг-мероприятия"
+                icon: <Palette className="w-10 h-10" />,
+                title: "Полиграфия",
+                description: "Визитки, флаеры, плакаты, листовки. Качественная печать любых тиражей"
               },
               {
-                icon: <Coffee className="w-10 h-10" />,
-                title: "Комфортные условия",
-                description: "Гибкий график работы, современное оборудование и все условия для продуктивной работы"
+                icon: <Camera className="w-10 h-10" />,
+                title: "Фотосъемка",
+                description: "Профессиональная предметная, каталожная и имиджевая фотосъемка"
               }
-            ].map((benefit, index) => (
+            ].map((service, index) => (
               <motion.div
                 key={index}
                 className="p-8 rounded-2xl bg-gradient-to-br from-red-50 to-pink-50 border border-red-100 hover:shadow-xl transition-all duration-300 group"
@@ -294,10 +294,71 @@ export default function Home() {
                 whileHover={{ y: -5 }}
               >
                 <div className="text-red-600 mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
+                  {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vacancies Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl font-bold mb-4">Наши вакансии</h2>
+            <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Присоединяйтесь к нашей команде профессионалов
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                icon: <UserCircle className="w-12 h-12" />,
+                title: "Контент-менеджер",
+                description: "Создание и публикация контента для соцсетей, ведение блогов, работа с текстами. Требуется опыт от 1 года, знание трендов SMM и отличное владение русским языком."
+              },
+              {
+                icon: <Palette className="w-12 h-12" />,
+                title: "Дизайнер",
+                description: "Разработка креативных концепций, создание макетов для печати и digital. Требуется портфолио, знание Adobe Creative Suite, понимание трендов в дизайне."
+              },
+              {
+                icon: <Camera className="w-12 h-12" />,
+                title: "Фотомодель",
+                description: "Участие в рекламных съемках для различных брендов и проектов. Требуется опыт позирования, выразительная внешность, ответственность и пунктуальность."
+              }
+            ].map((vacancy, index) => (
+              <motion.div
+                key={index}
+                className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="text-red-500 mb-6">
+                  {vacancy.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{vacancy.title}</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">{vacancy.description}</p>
+                <a
+                  href="mailto:hr@lavia.agency"
+                  className="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors duration-300"
+                >
+                  Откликнуться
+                </a>
               </motion.div>
             ))}
           </div>
