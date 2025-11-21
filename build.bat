@@ -7,3 +7,4 @@ echo.
 echo Готово! Запустите start.bat для запуска production сервера
 pause
 
+

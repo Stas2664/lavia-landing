@@ -354,7 +354,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4">{vacancy.title}</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">{vacancy.description}</p>
                 <a
-                  href="mailto:hr@lavia.agency"
+                  href="mailto:dir-lavia@rambler.ru"
                   className="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors duration-300"
                 >
                   Откликнуться
@@ -384,7 +384,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="mailto:info@lavia.agency"
+                href="mailto:dir-lavia@rambler.ru"
                 className="inline-block bg-white text-red-600 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -392,12 +392,12 @@ export default function Home() {
                 Связаться с нами
               </motion.a>
               <motion.a
-                href="tel:+79999999999"
+                href="tel:+79054269026"
                 className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-red-600 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                +7 (999) 999-99-99
+                +7 (905) 426-90-26
               </motion.a>
             </div>
           </motion.div>
@@ -410,14 +410,18 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">ЛАВИЯ</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-2">
                 Рекламное агентство полного цикла
+              </p>
+              <p className="text-gray-400 text-sm">
+                ИНН: 9719083429
               </p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Контакты</h4>
-              <p className="text-gray-400 mb-2">Email: info@lavia.agency</p>
-              <p className="text-gray-400 mb-2">Телефон: +7 (999) 999-99-99</p>
+              <p className="text-gray-400 mb-2">Email: dir-lavia@rambler.ru</p>
+              <p className="text-gray-400 mb-2">Телефон: +7 (905) 426-90-26</p>
+              <p className="text-gray-400 mb-2">Адрес: Газетный переулок, 52<br/>Ростов-на-Дону</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Социальные сети</h4>
