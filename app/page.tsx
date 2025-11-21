@@ -341,7 +341,7 @@ export default function Home() {
             ].map((vacancy, index) => (
               <motion.div
                 key={index}
-                className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col h-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -352,10 +352,10 @@ export default function Home() {
                   {vacancy.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{vacancy.title}</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">{vacancy.description}</p>
+                <p className="text-gray-300 leading-relaxed mb-6 flex-grow">{vacancy.description}</p>
                 <a
                   href="mailto:dir-lavia@rambler.ru"
-                  className="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors duration-300"
+                  className="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors duration-300 mt-auto"
                 >
                   Откликнуться
                 </a>
@@ -407,7 +407,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold mb-4">ЛАВИЯ</h3>
               <p className="text-gray-400 mb-2">
@@ -422,14 +422,6 @@ export default function Home() {
               <p className="text-gray-400 mb-2">Email: dir-lavia@rambler.ru</p>
               <p className="text-gray-400 mb-2">Телефон: +7 (905) 426-90-26</p>
               <p className="text-gray-400 mb-2">Адрес: Газетный переулок, 52<br/>Ростов-на-Дону</p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Социальные сети</h4>
-              <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">VK</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Telegram</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Instagram*</a>
-              </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
