@@ -383,22 +383,24 @@ export default function Home() {
               которая приведет ваш бизнес к успеху
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="mailto:dir-lavia@rambler.ru"
-                className="inline-block bg-white text-red-600 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <motion.div
+                className="inline-block bg-white text-red-600 px-10 py-4 rounded-full font-semibold text-lg shadow-2xl cursor-default"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
                 Связаться с нами
-              </motion.a>
-              <motion.a
-                href="tel:+79054269026"
-                className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-red-600 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </motion.div>
+              <motion.div
+                className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg cursor-default"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.9 }}
               >
                 +7 (905) 426-90-26
-              </motion.a>
+              </motion.div>
             </div>
           </motion.div>
         </div>
